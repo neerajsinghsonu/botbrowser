@@ -10,7 +10,7 @@
   },
   "files": [
     "src/main.server.ts",
-    "serverless.ts"
+    "serverless.ssr.ts"
   ],
   "angularCompilerOptions": {
     "entryModule": "./src/app/app.server.module#AppServerModule"

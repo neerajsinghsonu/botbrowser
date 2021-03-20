@@ -80,8 +80,8 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/botbrowser/serverless",
-            "main": "serverless.ts",
-            "tsConfig": "tsconfig.serverless.json"
+            "main": "serverless.ssr.ts",
+            "tsConfig": "tsconfig.serverless.ssr.json"
           },
           "configurations": {
             "production": {
