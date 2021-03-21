@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "botbrowser": {
+    "angryssr": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/botbrowser/browser",
+            "outputPath": "dist/angryssr/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "botbrowser:build"
+            "browserTarget": "angryssr:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "botbrowser:build:production"
+              "browserTarget": "angryssr:build:production"
             }
           }
         },
         "serverless": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/botbrowser/serverless",
+            "outputPath": "dist/angryssr/serverless",
             "main": "serverless.ssr.ts",
             "tsConfig": "tsconfig.serverless.ssr.json"
           },
@@ -100,7 +100,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "botbrowser:build"
+            "browserTarget": "angryssr:build"
           }
         },
         "test": {
@@ -138,18 +138,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "botbrowser:serve"
+            "devServerTarget": "angryssr:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "botbrowser:serve:production"
+              "devServerTarget": "angryssr:serve:production"
             }
           }
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/botbrowser/server",
+            "outputPath": "dist/angryssr/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
@@ -170,21 +170,21 @@
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",
           "options": {
-            "browserTarget": "botbrowser:build",
-            "serverTarget": "botbrowser:server"
+            "browserTarget": "angryssr:build",
+            "serverTarget": "angryssr:server"
           },
           "configurations": {
             "production": {
-              "browserTarget": "botbrowser:build:production",
-              "serverTarget": "botbrowser:server:production"
+              "browserTarget": "angryssr:build:production",
+              "serverTarget": "angryssr:server:production"
             }
           }
         },
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "browserTarget": "botbrowser:build:production",
-            "serverTarget": "botbrowser:server:production",
+            "browserTarget": "angryssr:build:production",
+            "serverTarget": "angryssr:server:production",
             "routes": [
               "/"
             ]
@@ -196,5 +196,5 @@
       }
     }
   },
-  "defaultProject": "botbrowser"
+  "defaultProject": "angryssr"
 }

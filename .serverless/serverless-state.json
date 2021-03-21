@@ -334,7 +334,7 @@
           "dist/**",
           "lambda.js"
         ],
-        "artifact": "/usr/local/var/www/botbrowser/.serverless/angular-lambda-ssr.zip",
+        "artifact": "/usr/local/var/www/angryssr/.serverless/angular-lambda-ssr.zip",
         "artifactDirectoryName": "serverless/angular-lambda-ssr/dev/1615236456733-2021-03-08T20:47:36.733Z"
       },
       "functions": {
@@ -345,7 +345,7 @@
       }
     },
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "/usr/local/var/www/botbrowser/.serverless/angular-lambda-ssr.zip"
+    "artifact": "/usr/local/var/www/angryssr/.serverless/angular-lambda-ssr.zip"
   },
   "package": {
     "artifactDirectoryName": "serverless/angular-lambda-ssr/dev/1615236456733-2021-03-08T20:47:36.733Z",

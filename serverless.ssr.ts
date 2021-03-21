@@ -6,7 +6,7 @@ import * as express from 'express';
 
 export const app = express();
 
-const distFolder = join(process.cwd(), 'dist/botbrowser/browser');
+const distFolder = join(process.cwd(), 'dist/angryssr/browser');
 
 app.set('view engine', 'html');
 app.set('views', distFolder);

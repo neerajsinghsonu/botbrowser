@@ -1,5 +1,5 @@
 {
-  "name": "botbrowser",
+  "name": "angryssr",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,11 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run botbrowser:serve-ssr",
-    "serve:ssr": "node dist/botbrowser/server/main.js",
-    "build:ssr": "ng build --prod && ng run botbrowser:server:production",
-    "prerender": "ng run botbrowser:prerender",
-    "build:sls": "ng build --prod && ng run botbrowser:serverless:production"
+    "dev:ssr": "ng run angryssr:serve-ssr",
+    "serve:ssr": "node dist/angryssr/server/main.js",
+    "build:ssr": "ng build --prod && ng run angryssr:server:production",
+    "prerender": "ng run angryssr:prerender",
+    "build:sls": "ng build --prod && ng run angryssr:serverless:production"
   },
   "private": true,
   "dependencies": {
