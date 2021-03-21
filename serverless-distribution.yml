@@ -6,7 +6,6 @@ provider:
 
 resources:
   Resources:
-   
     # the origin Identity that we will use in S3, to only allow a specific cloudfront distribution
     # access to the S3 content, to keep S3 private
     CloudFrontIdentity:
@@ -37,12 +36,12 @@ resources:
           IPV6Enabled: true
           PriceClass: PriceClass_All
           Origins:
-            - DomainName: !Join 
-              - ''
-              - - !Ref MyS3Bucket
-                - .s3.amazonaws.com
+            - DomainName: !Join
+                - ""
+                - - !Ref MyS3Bucket
+                  - .s3.amazonaws.com
               S3OriginConfig:
-                OriginAccessIdentity: !Sub 'origin-access-identity/cloudfront/${CloudFrontIdentity}'
+                OriginAccessIdentity: !Sub "origin-access-identity/cloudfront/${CloudFrontIdentity}"
               Id: S3
           CustomErrorResponses:
             - ErrorCode: 404
@@ -60,7 +59,7 @@ resources:
       Properties:
         BucketName: angryssr
 
-    # the policy that grants access to S3 to only the cloudfront origin identity 
+    # the policy that grants access to S3 to only the cloudfront origin identity
     MyS3BucketPolicy:
       Type: AWS::S3::BucketPolicy
       Properties:
@@ -71,9 +70,9 @@ resources:
             Principal:
               AWS: !Sub "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity ${CloudFrontIdentity}"
             Action: "s3:GetObject"
-            Resource: !Join 
-              - ''
-              - - 'arn:aws:s3:::'
+            Resource: !Join
+              - ""
+              - - "arn:aws:s3:::"
                 - !Ref MyS3Bucket
                 - /*
 
