@@ -57,7 +57,7 @@ resources:
     MyS3Bucket:
       Type: AWS::S3::Bucket
       Properties:
-        BucketName: angryssr
+        BucketName: replacewithyourbucketname
 
     # the policy that grants access to S3 to only the cloudfront origin identity
     MyS3BucketPolicy:
